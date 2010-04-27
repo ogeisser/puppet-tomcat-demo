@@ -1,0 +1,26 @@
+This is a simple demo to show how easy it is to deploy on Tomcat with Puppet.
+This demo initially assumes Ubuntu 9.10 Server but should be easily adaptable to other distributions.
+
+To run this demo:
+
+apt-get install puppet git
+mkdir /srv
+cd /srv
+git clone git@github.com:mpdehaan/puppet-tomcat-demo.git
+cd puppet-tomcat-demo
+sudo sh test.sh  # will run Puppet with the correct arguments
+
+The puppet content lives in 'modules'.
+
+The WAR file we are using lives in 'java_src' and is from http://simple.souther.us/.  This could
+be replaced with any java WAR.
+
+In a production environment, you may wish to package your WAR files as debs (or RPMs) or even source
+them from an NFS mount.  There are lots of ways to transfer them from your build environment.
+
+Advanced users will want to adapt this to deploy multiple files, set up databases, and so forth.  Puppet
+can also do these things.  Please ask if you have questions.
+
+Michael DeHaan
+michael@puppetlabs.com
+
