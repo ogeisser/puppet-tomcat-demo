@@ -1,1 +1,1 @@
-puppet --modulepath /srv/demo/modules -v /srv/demo/site.pp
+puppet --modulepath /srv/puppet-tomcat-demo/modules -v /srv/puppet-tomcat-demo/site.pp
