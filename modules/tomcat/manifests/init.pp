@@ -16,7 +16,6 @@ class tomcat {
     require => Package['tomcat6'],
   }
  
-  # make web server accessable at $fqdn:8080/admin
   package { 'tomcat6-admin':
     require => Package['tomcat6'],
   }
